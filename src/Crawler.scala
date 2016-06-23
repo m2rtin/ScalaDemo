@@ -121,7 +121,7 @@ class PriorityQueue {
   def pick = urlQueue.dequeue()
 }
 
-class CrawlHistory extends JsonSerialize {
+class CrawlHistory extends JsonSerialize { // history should have been named something like "Saver" and the visited method should be moved to queue object - would make more sense
   val crawlMap = collection.mutable.HashMap[String, String]()
 
   def visited(url:String): Boolean = crawlMap.contains(url)
